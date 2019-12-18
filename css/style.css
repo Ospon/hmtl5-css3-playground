@@ -131,6 +131,7 @@ p {
 
 .screenshots__item img {
     margin-right: 15px;
+    min-width: 200px;
 }
 
 .reviews {
@@ -156,6 +157,7 @@ p {
 
 .reviews__item img {
     margin-right: 25px;
+    min-width: 75px;
 }
 
 .reviews__item p {
