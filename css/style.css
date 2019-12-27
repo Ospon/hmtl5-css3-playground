@@ -1,3 +1,8 @@
+@font-face {
+    font-family: SocialIco;
+    src: url("../fonts/Socialico.ttf");
+}
+
 body {
     font-family: Arial;
     margin: 0;
@@ -41,6 +46,11 @@ p {
 .product-main {
     color: #fff;
     background-color: #445161;
+}
+
+.product-main__container {
+    max-width: 1220px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -53,14 +63,11 @@ p {
     margin: 0 0 50px 0;
 }
 
-.product-main img {
-    max-width: 100%;
-}
-
 .product-main ul {
     padding: 0 0 0 30px;
     margin: 0;
-    list-style-image: url(../img/check\ icon.png);
+    /* list-style: inside url(../img/check-icon.png); */
+    list-style-image: url(../img/check-icon.png);
 }
 
 .product-main ul li {
@@ -68,7 +75,9 @@ p {
     font-size: 20px;
 }
 
-.about-product {
+.about-product__container {
+    max-width: 1220px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -157,11 +166,15 @@ p {
 
 .reviews__item img {
     margin-right: 25px;
-    min-width: 75px;
+    width: 75px;
 }
 
 .reviews__item p {
     margin-top: 0;
+}
+
+.reviews__item img {
+    border-radius: 50%;
 }
 
 .reviews__content {
@@ -173,7 +186,11 @@ p {
 
 .reviews__content::before {
     position: absolute;
-    content: url(../img/triangle.svg);
+    content: '';
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    background-color: #ebebeb;
     top: 25px;
     left: -11px;
 }
@@ -210,18 +227,19 @@ p {
 }
 
 .price-list__item {
+    display: flex;
+    flex-direction: column;
     width: 292px;
     margin: 0 20px 20px 20px;
     background: #445162;
     color: #fff;
     border: 4px solid #445162;
     border-radius: 8px;
-    padding: 20px;
 }
 
 .price-list__item ol {
     padding-left: 16px;
-    margin: 20px 0;
+    margin: 20px;
     font-size: 14px;
 }
 
@@ -230,7 +248,7 @@ p {
 }
 
 .white-btn {
-    width: 100%;
+
     background-color: #fff;
     color: #445162;
     text-transform: uppercase;
@@ -240,6 +258,8 @@ p {
     border: none;
     border-radius: 8px;
     font-weight: 700;
+    text-decoration: none;
+    margin: 20px;
 }
 
 .white-btn:hover {
@@ -248,15 +268,12 @@ p {
 
 .price-list h3 {
     text-align: center;
-    margin: 0 0 24px 0;
+    margin: 20px;
     color: #fff;
 }
 
 .price {
     display: block;
-    width: 298px;
-    position: relative;
-    left: -21px;
     background-color: #fff;
     color: #445162;
     font-size: 40px;
@@ -271,6 +288,7 @@ footer {
     color: #fff;
     background-color: #445162;
 }
+
 .padding-footer {
     padding: 50px 5% 10px;
 }
@@ -289,20 +307,20 @@ footer h2 {
     font-size: 12px;
 }
 
-.contact-from {
+.contact-form {
     width: 40%;
     display: flex;
     flex-direction: column;
     padding: 25px;
 }
 
-.contact-from form {
+.contact-form form {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-.contact-from input {
+.contact-form input {
     margin-bottom: 20px;
     width: 100%;
     border-radius: 8px;
@@ -311,7 +329,7 @@ footer h2 {
     color: #445162;
 }
 
-.contact-from textarea {
+.contact-form textarea {
     margin-bottom: 20px;
     width: 100%;
     border-radius: 8px;
@@ -321,23 +339,23 @@ footer h2 {
     padding: 14px 10px;
 }
 
-.contact-from input::placeholder {
+.contact-form input::placeholder {
     color: #445162;
 }
 
-.contact-from input:not([type="submit"]) {
+.contact-form input:not([type="submit"]) {
     padding: 14px 10px;
 }
 
-.contact-from textarea {
+.contact-form textarea {
     margin-bottom: 20px;
 }
 
-.contact-from textarea::placeholder {
+.contact-form textarea::placeholder {
     color: #445162;
 }
 
-.contact-from input[type="submit"] {
+.contact-form input[type="submit"] {
     display: block;
     padding: 14px 48px;
     width: 150px;
@@ -347,13 +365,14 @@ footer h2 {
     color: #445162;
 }
 
-.contact-from input[type="submit"]:hover {
+.contact-form input[type="submit"]:hover {
     background-color: #cacaca;
 }
 
 address {
     padding: 25px;
     width: 31%;
+    font-style: normal;
 }
 
 address ul {
@@ -379,4 +398,138 @@ address ul li img {
 
 .social {
     margin: 20px 0;
+    font-family: SocialIco, sans-serif;
+    color: #ffffff;
+    font-size: 60px;
+    line-height: 44px;
+}
+
+@media only screen and (max-width: 1020px) {
+    img {
+        width: 100%;
+    }
+
+    .img-warpper {
+        width: 100%;
+    }
+
+    .product-main ul {
+        margin-bottom: 50px;
+    }
+
+    .screenshots__item img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .screenshots__item {
+        flex-wrap: wrap;
+    }
+
+    .dignity-product__item {
+        width: 100%;
+    }
+
+    .reviews__item {
+        width: 100%;
+    }
+
+    .price-list__container {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .price-list__item {
+        width: 100%;
+    }
+
+    .price-list__item ol {
+        margin: 20px auto;
+    }
+
+    .about-product__info {
+        width: 100%;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-form form {
+        align-items: center;
+    }
+
+    .contact-form input {
+        width: 90%;
+    }
+
+    .contact-form textarea {
+        width: 90%;
+    }
+
+    address {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .padding-main {
+        padding: 0;
+    }
+
+    .product-main ul {
+        margin-bottom: 0px;
+    }
+
+    .product-main__content {
+        padding: 40px 5%;
+    }
+
+    .about-product__info {
+        padding: 40px 5%;
+    }
+
+    .img-warpper {
+        width: 100%;
+    }
+
+    .product-main h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+
+    .dignity-product {
+        padding: 30px 5%;
+    }
+
+    .screenshots {
+        padding: 30px 5%;
+    }
+
+    .screenshots__item {
+        width: 100%;
+    }
+
+    .reviews {
+        padding: 30px 5%;
+    }
+
+    .reviews__item {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .reviews__item img {
+        margin: 0 0 20px 0;
+    }
+
+    .reviews__content::before {
+        top: -11px;
+        left: calc(50% - 10px);
+    }
+
+    .contact-form {
+        padding: 0;
+    }
 }
