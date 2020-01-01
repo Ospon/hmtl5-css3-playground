@@ -39,6 +39,10 @@ p {
     line-height: 1.5;
 }
 
+video {
+    width: 100%;
+}
+
 .padding-main {
     padding: 50px 5%;
 }
@@ -87,6 +91,10 @@ p {
     width: 50%;
 }
 
+.img-wrapper {
+    width: 48%;
+}
+
 .dignity-product {
     display: flex;
     justify-content: space-between;
@@ -116,6 +124,52 @@ p {
 
 .dignity-product__item p {
     margin: 0;
+}
+
+.video-background {
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+    height: 30rem;
+}
+
+.video-background video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+
+}
+
+.video-background__onVideo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-background__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-background h2 {
+    text-transform: uppercase;
+    font-size: 4em;
+    color: #fff;
+    text-align: center;
+    width: 80%;
+}
+
+.video-background p {
+    width: 60%;
+    text-align: center;
 }
 
 .screenshots {
@@ -409,7 +463,7 @@ address ul li img {
         width: 100%;
     }
 
-    .img-warpper {
+    .img-wrapper {
         width: 100%;
     }
 
@@ -489,7 +543,7 @@ address ul li img {
         padding: 40px 5%;
     }
 
-    .img-warpper {
+    .img-wrapper {
         width: 100%;
     }
 
@@ -500,6 +554,9 @@ address ul li img {
 
     .dignity-product {
         padding: 30px 5%;
+    }
+    .video-background h2 {
+        font-size: 2em;;
     }
 
     .screenshots {
@@ -531,5 +588,8 @@ address ul li img {
 
     .contact-form {
         padding: 0;
+    }
+    .video-background p {
+        width: 80%;
     }
 }
